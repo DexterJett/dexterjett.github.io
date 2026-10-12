@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EquiRythm - Equestrian Metronome App</title>
+    <title>Michael Alexander Real</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -12,94 +12,133 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
             color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 40px 20px 32px;
+            line-height: 1.7;
         }
-        
+
         .container {
             max-width: 800px;
-            text-align: center;
+            margin: 0 auto;
         }
-        
-        .logo {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            box-shadow: 0 10px 40px rgba(76, 175, 80, 0.3);
-        }
-        
-        .logo span {
-            font-size: 60px;
-        }
-        
+
         h1 {
-            font-size: 3rem;
+            font-size: 2.4rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             background: linear-gradient(90deg, #4CAF50, #81C784);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #a0a0a0;
-            margin-bottom: 40px;
+
+        .lead {
+            color: #ccc;
+            font-size: 1.05rem;
+            margin-bottom: 28px;
         }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        nav {
+            display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        nav a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+        }
+
+        section {
+            scroll-margin-top: 24px;
             margin-bottom: 40px;
         }
-        
-        .feature {
+
+        .app-card {
             background: rgba(255, 255, 255, 0.05);
             padding: 25px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
         }
-        
+
+        .app-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 6px;
+        }
+
+        .overline {
+            color: #a0a0a0;
+            letter-spacing: 0.14em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            color: #a0a0a0;
+            margin-bottom: 18px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        
-        .feature h3 {
-            font-size: 1rem;
+            font-size: 1.4rem;
             margin-bottom: 8px;
+        }
+
+        .feature h4 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
             color: #4CAF50;
         }
-        
+
+        .feature p,
+        .app-card p,
+        .support-block p,
+        .support-block li {
+            color: #ccc;
+        }
+
         .feature p {
             font-size: 0.85rem;
-            color: #888;
+            color: #bdbdbd;
         }
-        
+
         .store-buttons {
             display: flex;
-            gap: 15px;
-            justify-content: center;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin: 8px 0 16px;
         }
-        
+
         .store-btn {
             display: inline-flex;
             align-items: center;
@@ -110,89 +149,181 @@
             text-decoration: none;
             border-radius: 12px;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        
+
         .store-btn:hover {
-            transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
-        .store-btn img {
-            height: 24px;
+
+        .text-link {
+            color: #4CAF50;
         }
-        
+
+        .soon {
+            color: #ccc;
+            margin-bottom: 12px;
+        }
+
+        .app-card-next {
+            border-style: dashed;
+            background: transparent;
+        }
+
+        .app-card-next p {
+            color: #a0a0a0;
+        }
+
+        .support-block {
+            margin-bottom: 22px;
+        }
+
+        .support-block h3 {
+            font-size: 1.05rem;
+            color: #4CAF50;
+            margin-bottom: 8px;
+        }
+
+        .support-block ul {
+            padding-left: 20px;
+            color: #ccc;
+        }
+
+        .support-block li {
+            margin-bottom: 6px;
+        }
+
+        .en-note {
+            margin-top: 8px;
+        }
+
         footer {
-            margin-top: auto;
-            padding-top: 40px;
+            padding-top: 8px;
             color: #666;
             font-size: 0.85rem;
         }
-        
+
         footer a {
             color: #4CAF50;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
-        
-        .links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 15px;
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        address {
+            font-style: normal;
+            color: #ccc;
+            margin-bottom: 12px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">
-            <span>🎵</span>
-        </div>
-        
-        <h1>EquiRythm</h1>
-        <p class="tagline">Professional Metronome for Equestrian Training</p>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h3>Precise Metronome</h3>
-                <p>Accurate BPM control from 0-200 for perfect rhythm</p>
+        <header>
+            <h1>Michael Alexander Real</h1>
+            <p class="lead">Ich bin Michael Alexander Real und baue meine Apps selbst.</p>
+            <nav>
+                <a href="#apps">Apps</a>
+                <a href="#support">Support</a>
+                <a href="#impressum">Impressum</a>
+            </nav>
+        </header>
+
+        <section id="apps">
+            <h2>Apps</h2>
+
+            <article class="app-card" id="equirythm" lang="en">
+                <h3>EquiRythm</h3>
+                <p class="tagline">Professional Metronome for Equestrian Training</p>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Precise Metronome</h4>
+                        <p>Accurate BPM control from 0-200 for perfect rhythm</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📋</div>
+                        <h4>Training Plans</h4>
+                        <p>Create custom interval trainings with exercises and breaks</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h4>Background Audio</h4>
+                        <p>Keeps playing while your screen is locked</p>
+                    </div>
+                </div>
+                <div class="store-buttons">
+                    <a href="https://apps.apple.com/app/equirythm/id6756265009" class="store-btn">
+                        <span>🍎</span>
+                        App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.equirythm" class="store-btn">
+                        <span>▶️</span>
+                        Google Play
+                    </a>
+                </div>
+                <p><a class="text-link" href="https://dexterjett.github.io/privacy-policy/equirythm/">Privacy Policy</a></p>
+            </article>
+
+            <article class="app-card" id="luminavault">
+                <p class="overline">RELIKTJÄGER</p>
+                <h3>Lumina Vault</h3>
+                <p>Taktisches Raster-Puzzle. 54 Kammern, fünf Welten: Quarzkammern, Glutforge, Frostarchiv, Schattennische, Nexuskrone. Kostenlos, kein Account.</p>
+                <p class="soon">Demnächst im App Store</p>
+                <p><a class="text-link" href="https://dexterjett.github.io/privacy-policy/luminavault/">Datenschutzerklärung</a></p>
+            </article>
+
+            <article class="app-card app-card-next" id="weitere">
+                <h3>Weitere Apps</h3>
+                <p>Hier ist Platz für die nächste App.</p>
+            </article>
+        </section>
+
+        <section id="support">
+            <h2>Support</h2>
+
+            <div class="support-block" lang="en">
+                <h3>EquiRythm</h3>
+                <p>Your training data stays on your device.</p>
+                <p lang="de">Kontakt über die E-Mail dieser Seite. <a class="text-link" href="https://dexterjett.github.io/privacy-policy/equirythm/">Privacy Policy</a></p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">📋</div>
-                <h3>Training Plans</h3>
-                <p>Create custom interval trainings with exercises and breaks</p>
+
+            <div class="support-block">
+                <h3>Lumina Vault</h3>
+                <ul>
+                    <li>Kein Account</li>
+                    <li>Sprache: Einstellungen → Sprache</li>
+                    <li>Fortschritt: Einstellungen → Fortschritt löschen</li>
+                    <li>Werbung aus: Einstellungen → Werbung (dezent)</li>
+                    <li>Einwilligung in der EU: Einstellungen → Werbe-Einwilligung, sobald der Eintrag erscheint</li>
+                </ul>
+                <p class="en-note" lang="en">Lumina Vault is free and has no account. Language: Einstellungen → Sprache. Delete the save: Einstellungen → Fortschritt löschen. Turn ads off: Einstellungen → Werbung (dezent). In the EU, ad consent is under Einstellungen → Werbe-Einwilligung once that entry appears. Email: <a class="text-link" href="mailto:michaelreal84@gmail.com">michaelreal84@gmail.com</a>.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <h3>Background Audio</h3>
-                <p>Keeps playing while your screen is locked</p>
+
+            <div class="support-block">
+                <h3>Kontakt</h3>
+                <p><a class="text-link" href="mailto:michaelreal84@gmail.com">michaelreal84@gmail.com</a></p>
             </div>
-        </div>
-        
-        <div class="store-buttons">
-            <a href="https://apps.apple.com/app/equirythm/id6756265009" class="store-btn">
-                <span>🍎</span>
-                App Store
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.equirythm" class="store-btn">
-                <span>▶️</span>
-                Google Play
-            </a>
-        </div>
+        </section>
+
+        <section id="impressum">
+            <h2>Impressum</h2>
+            <address>
+                Michael Alexander Real<br>
+                <a class="text-link" href="mailto:michaelreal84@gmail.com">michaelreal84@gmail.com</a>
+            </address>
+            <p><a class="text-link" href="https://github.com/DexterJett">GitHub</a></p>
+        </section>
+
+        <footer>
+            <p><a href="https://dexterjett.github.io/privacy-policy/">Datenschutzerklärungen</a></p>
+            <p>© 2025 Michael Alexander Real. All rights reserved.</p>
+        </footer>
     </div>
-    
-    <footer>
-        <div class="links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="mailto:michaelreal84@gmail.com">Contact</a>
-            <a href="https://github.com/DexterJett">GitHub</a>
-        </div>
-        <p>© 2025 Michael Alexander Real. All rights reserved.</p>
-    </footer>
 </body>
 </html>
-
